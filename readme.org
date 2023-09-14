@@ -1,0 +1,2 @@
+* About
+A last ditch attempt to quickly port code from ~NumPy~ to ~C++~.
