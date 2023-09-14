@@ -1,0 +1,17 @@
+[project]
+name = "xtensor-scipy"
+version = "0.1.0"
+description = "Add a short description here"
+authors = ["Rohit Goswami <rog32@hi.is>"]
+channels = ["conda-forge"]
+platforms = ["linux-64"]
+
+[tasks]
+
+[dependencies]
+xtensor-io = "0.13.0.*"
+xtensor = "0.24.6.*"
+xtensor-blas = "0.20.0.*"
+fmt = "10.1.1.*"
+scipy = "1.11.2.*"
+ipython = "8.15.0.*"
