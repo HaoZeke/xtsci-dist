@@ -19,6 +19,7 @@ test_deps += dependency(
 test_args = _args
 test_array = [#
   ['pdist_euc_test', 'pdist_euc_test.cpp'],
+  ['pdist_seuc_test', 'pdist_seuc_test.cpp'],
 ]
 foreach test : test_array
   test(test.get(0),
