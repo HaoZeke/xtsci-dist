@@ -20,6 +20,7 @@ if get_option('with_tests')
     test_array = [#
       ['pdist_euc_test', 'pdist_euc_test.cpp', '/CppCore/tests'],
       ['pdist_seuc_test', 'pdist_seuc_test.cpp', '/CppCore/tests'],
+      ['pdist_sqeuc_test', 'pdist_sqeuc_test.cpp', '/CppCore/tests'],
       ['squareform_test', 'squareform_test.cpp', ''],
       ['util_test', 'util_test.cpp', ''],
     ]

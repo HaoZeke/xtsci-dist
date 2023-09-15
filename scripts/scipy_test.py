@@ -8,7 +8,13 @@ inp = np.random.rand(3, 4)
 print(inp)
 eucDist = distance.pdist(inp, metric="euclidean")
 seuDist = distance.pdist(inp, metric="seuclidean")
-print(f"Euclidean distance = {eucDist} \nScaled Euclidean distance = {seuDist}")
+sqeuDist = distance.pdist(inp, metric="sqeuclidean")
+print(
+    f"Euclidean distance = {eucDist} \n"
+    f"Scaled Euclidean distance = {seuDist}\n"
+    f"Sq. Euclidean distance = {sqeuDist}"
+)
+print(f"Euc Sq. = {eucDist**2}")
 var = np.var(inp, axis=0, ddof=1)
 print(
     f"var = {var} and sqrt(var) = {np.sqrt(var)}"
@@ -17,3 +23,4 @@ print(
 np.savez_compressed("inp_3_4.npz", inp=inp)
 np.savez_compressed("eucDist_3_4.npz", eucDist=eucDist)
 np.savez_compressed("seuDist_3_4.npz", seuDist=seuDist)
+np.savez_compressed("sqeuDist_3_4.npz", sqeuDist=sqeuDist)

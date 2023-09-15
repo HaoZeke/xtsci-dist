@@ -10,6 +10,7 @@
 
 #include "distance/pdist/euclidean.hpp"
 #include "distance/pdist/seuclidean.hpp"
+#include "distance/pdist/sqeuclidean.hpp"
 #include "distance/squareform.hpp"
 #include "include/xtensor_fmt.hpp"
 #include "xtensor-io/xnpz.hpp"
@@ -19,12 +20,14 @@ int main(int argc, char *argv[]) {
   // Eat warnings, also safer
   static_cast<void>(argc);
   static_cast<void>(argv);
-  xt::xarray<double> feat = {0.57955012, 0.9640571, 0.96120518};
-  feat.reshape({3, 1});
-  // auto feat = xt::load_npz<double>("inp_3_4.npz", "A");
+  // xt::xarray<double> feat = {0.57955012, 0.9640571, 0.96120518};
+  // feat.reshape({3, 1});
+  auto feat = xt::load_npz<double>("inp_3_4.npz", "inp");
   fmt::print("feat: {}\n", feat);
   xt::xarray<double> xtpd_euc = xts::distance::pdist::euclidean(feat);
   fmt::print("xtpd_euc: {}\n", xtpd_euc);
+  xt::xarray<double> xtpd_sqeuc = xts::distance::pdist::sqeuclidean(feat);
+  fmt::print("xtpd_sqeuc: {}\n", xtpd_sqeuc);
   xt::xarray<double> xtpd_seuc = xts::distance::pdist::seuclidean(feat);
   fmt::print("xtpd_seuc: {}\n", xtpd_seuc);
   // Squareform
