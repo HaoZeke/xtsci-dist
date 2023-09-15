@@ -34,5 +34,5 @@ jobs:
       - name: Build and Test
         shell: pixi run bash {0}
         run: |
-          meson setup bbdir
+          meson setup bbdir -Dwith_tests=True
           meson test -C bbdir -vvv
