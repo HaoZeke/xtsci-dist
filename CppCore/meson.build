@@ -24,6 +24,7 @@ if get_option('with_tests')
       ['squareform_test', 'squareform_test.cpp', ''],
       ['util_test', 'util_test.cpp', ''],
       ['cdist_euc_test', 'cdist_euc_test.cpp', '/CppCore/tests/data/cdist'],
+      ['cdist_sqeuc_test', 'cdist_sqeuc_test.cpp', '/CppCore/tests/data/cdist'],
     ]
     foreach test : test_array
       test(test.get(0),
