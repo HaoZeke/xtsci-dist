@@ -20,6 +20,7 @@ test_args = _args
 test_array = [#
   ['pdist_euc_test', 'pdist_euc_test.cpp', '/CppCore/tests'],
   ['pdist_seuc_test', 'pdist_seuc_test.cpp', '/CppCore/tests'],
+  ['squareform_test', 'squareform_test.cpp', ''],
 ]
 foreach test : test_array
   test(test.get(0),
