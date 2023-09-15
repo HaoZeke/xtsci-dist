@@ -34,13 +34,12 @@ TEST_CASE("Testing distance::pdist::sqeuclidean",
   }
 
   SECTION("Test 3: A 3x4 matrix") {
-    xt::xarray<double> mat =
-        xt::load_npz<double>("data/pdist_inp_3_4.npz", "inp");
+    xt::xarray<double> mat = xt::load_npz<double>("pdist_inp_3_4.npz", "inp");
     // TODO(rgoswami): Upstream bug, Layout not supported in immediate
-    // reduction. auto tdat= xt::load_npz("data/inp_3_4.npz"); auto mat =
+    // reduction. auto tdat= xt::load_npz("inp_3_4.npz"); auto mat =
     // tdat["inp"].cast<double>();
     xt::xarray<double> expected =
-        xt::load_npz<double>("data/sqeuDist_3_4.npz", "sqeuDist");
+        xt::load_npz<double>("sqeuDist_3_4.npz", "sqeuDist");
     auto result = xts::distance::pdist::sqeuclidean(mat);
     REQUIRE(result.shape()[0] == 3);
     for (size_t idx{0}; idx < expected.shape()[0]; ++idx) {

@@ -18,11 +18,12 @@ if get_option('with_tests')
     )
     test_args = _args
     test_array = [#
-      ['pdist_euc_test', 'pdist_euc_test.cpp', '/CppCore/tests'],
-      ['pdist_seuc_test', 'pdist_seuc_test.cpp', '/CppCore/tests'],
-      ['pdist_sqeuc_test', 'pdist_sqeuc_test.cpp', '/CppCore/tests'],
+      ['pdist_euc_test', 'pdist_euc_test.cpp', '/CppCore/tests/data/pdist'],
+      ['pdist_seuc_test', 'pdist_seuc_test.cpp', '/CppCore/tests/data/pdist'],
+      ['pdist_sqeuc_test', 'pdist_sqeuc_test.cpp', '/CppCore/tests/data/pdist'],
       ['squareform_test', 'squareform_test.cpp', ''],
       ['util_test', 'util_test.cpp', ''],
+      # ['cdist_euc_test', 'cdist_euc_test.cpp', '/CppCore/tests'],
     ]
     foreach test : test_array
       test(test.get(0),
