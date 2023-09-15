@@ -19,7 +19,7 @@ template <class E> auto euclidean(const xt::xexpression<E> &expr) {
   std::size_t n_rows = mat.shape()[0];
   std::size_t m_entries = n_rows * (n_rows - 1) / 2;
   xt::xarray<typename E::value_type> distances =
-      xt::zeros<typename E::value_type>({m_entries});
+      xt::empty<typename E::value_type>({m_entries});
 
   size_t k = 0;
   for (std::size_t i = 0; i < n_rows; ++i) {
