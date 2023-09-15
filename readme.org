@@ -13,7 +13,7 @@ based on my needs. At some point (or with funding) this might cover all of
 ** Components
 The heart of the library is the ~xts~ namespace, with functions further
 demarcated according to the relevant ~scipy~ modules e.g.
-~xts::distances::pdist::euclidean~.
+~xts::distance::pdist::euclidean~.
 
 ** License
 MIT.

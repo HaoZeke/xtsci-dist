@@ -9,7 +9,7 @@
 #include "xtensor-blas/xlinalg.hpp"
 
 namespace xts {
-namespace distances {
+namespace distance {
 namespace pdist {
 
 template <class E> auto seuclidean_1D(const xt::xexpression<E> &expr) {
@@ -72,5 +72,5 @@ template <class E> auto seuclidean(const xt::xexpression<E> &expr) {
 }
 
 } // namespace pdist
-} // namespace distances
+} // namespace distance
 } // namespace xts

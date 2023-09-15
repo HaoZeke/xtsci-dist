@@ -3,17 +3,17 @@
 #include "xtensor-io/xnpz.hpp"
 #include "xtensor/xarray.hpp"
 
-#include "distances/pdist/euclidean.hpp"
+#include "distance/pdist/euclidean.hpp"
 
 #include <catch2/catch_all.hpp>
 
-TEST_CASE("Testing distances::pdist::euclidean",
-          "[distances::pdist::euclidean]") {
+TEST_CASE("Testing distance::pdist::euclidean",
+          "[distance::pdist::euclidean]") {
   SECTION("Test 1: Simple 3x1 matrix") {
     xt::xarray<double> mat = {0.57955012, 0.9640571, 0.96120518};
     mat.reshape({3, 1});
 
-    auto result = xts::distances::pdist::euclidean(mat);
+    auto result = xts::distance::pdist::euclidean(mat);
 
     REQUIRE(result.shape()[0] == 3);
     REQUIRE(result(0) == Catch::Approx(0.38450698));
@@ -25,7 +25,7 @@ TEST_CASE("Testing distances::pdist::euclidean",
     xt::xarray<double> mat = {1.0, 2.0, 3.0};
     mat.reshape({3, 1});
 
-    auto result = xts::distances::pdist::euclidean(mat);
+    auto result = xts::distance::pdist::euclidean(mat);
 
     REQUIRE(result.shape()[0] == 3);
     REQUIRE(result(0) == Catch::Approx(1.0));
@@ -40,7 +40,7 @@ TEST_CASE("Testing distances::pdist::euclidean",
     // tdat["inp"].cast<double>();
     xt::xarray<double> expected =
         xt::load_npz<double>("data/eucDist_3_4.npz", "eucDist");
-    auto result = xts::distances::pdist::euclidean(mat);
+    auto result = xts::distance::pdist::euclidean(mat);
     REQUIRE(result.shape()[0] == 3);
     for (size_t idx{0}; idx < expected.shape()[0]; ++idx) {
       REQUIRE(result(idx) == Catch::Approx(expected(idx)));
@@ -50,7 +50,6 @@ TEST_CASE("Testing distances::pdist::euclidean",
   SECTION("Test 4: Input is not a 2D tensor") {
     xt::xarray<double> mat = {1.0, 2.0, 3.0};
 
-    REQUIRE_THROWS_AS(xts::distances::pdist::euclidean(mat),
-                      std::runtime_error);
+    REQUIRE_THROWS_AS(xts::distance::pdist::euclidean(mat), std::runtime_error);
   }
 }

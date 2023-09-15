@@ -8,8 +8,8 @@
 
 #include <iostream>
 
-#include "distances/pdist/euclidean.hpp"
-#include "distances/pdist/seuclidean.hpp"
+#include "distance/pdist/euclidean.hpp"
+#include "distance/pdist/seuclidean.hpp"
 #include "include/xtensor_fmt.hpp"
 #include "xtensor-io/xnpz.hpp"
 #include "xtensor/xarray.hpp"
@@ -22,9 +22,9 @@ int main(int argc, char *argv[]) {
   feat.reshape({3, 1});
   // auto feat = xt::load_npz<double>("inp_3_4.npz", "A");
   fmt::print("feat: {}\n", feat);
-  xt::xarray<double> xtpd_euc = xts::distances::pdist::euclidean(feat);
+  xt::xarray<double> xtpd_euc = xts::distance::pdist::euclidean(feat);
   fmt::print("xtpd_euc: {}\n", xtpd_euc);
-  xt::xarray<double> xtpd_seuc = xts::distances::pdist::seuclidean(feat);
+  xt::xarray<double> xtpd_seuc = xts::distance::pdist::seuclidean(feat);
   fmt::print("xtpd_seuc: {}\n", xtpd_seuc);
   return EXIT_SUCCESS;
 }

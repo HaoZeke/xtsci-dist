@@ -9,7 +9,7 @@
 #include "xtensor-blas/xlinalg.hpp"
 
 namespace xts {
-namespace distances {
+namespace distance {
 namespace pdist {
 template <class E> auto euclidean(const xt::xexpression<E> &expr) {
   const auto &mat = expr.derived_cast();
@@ -33,5 +33,5 @@ template <class E> auto euclidean(const xt::xexpression<E> &expr) {
   return distances;
 }
 } // namespace pdist
-} // namespace distances
+} // namespace distance
 } // namespace xts
