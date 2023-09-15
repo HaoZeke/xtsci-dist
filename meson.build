@@ -53,6 +53,7 @@ endif
 _deps += dependency('fmt')
 _deps += dependency('xtensor')
 _deps += dependency('xtensor-blas')
+_deps += [dependency('zlib'), dependency('xtensor-io')]
 
 # --------------------- Projects
 subdir('CppCore')
