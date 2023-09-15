@@ -1,5 +1,4 @@
 _incdirs += include_directories(['include'])
-_incdirs += include_directories(['xtsci'])
 
 # --------------------- Executable
 

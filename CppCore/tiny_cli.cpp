@@ -8,14 +8,14 @@
 
 #include <iostream>
 
-#include "distance/cdist/euclidean.hpp"
-#include "distance/pdist/euclidean.hpp"
-#include "distance/pdist/seuclidean.hpp"
-#include "distance/pdist/sqeuclidean.hpp"
-#include "distance/squareform.hpp"
 #include "include/xtensor_fmt.hpp"
 #include "xtensor-io/xnpz.hpp"
 #include "xtensor/xarray.hpp"
+#include "xtsci/distance/cdist/euclidean.hpp"
+#include "xtsci/distance/pdist/euclidean.hpp"
+#include "xtsci/distance/pdist/seuclidean.hpp"
+#include "xtsci/distance/pdist/sqeuclidean.hpp"
+#include "xtsci/distance/squareform.hpp"
 
 int main(int argc, char *argv[]) {
   // Eat warnings, also safer

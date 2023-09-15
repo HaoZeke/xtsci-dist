@@ -57,6 +57,7 @@ _deps += [dependency('zlib'), dependency('xtensor-io')]
 
 # --------------------- Projects
 subdir('CppCore')
+_incdirs += [ 'CppCore' ]
 xtsci_dist_dep = declare_dependency(include_directories: _incdirs,
                                     link_with: _linkto,
                                     dependencies: _deps)

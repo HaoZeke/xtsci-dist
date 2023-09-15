@@ -2,8 +2,8 @@
 // Copyright 2023--present Rohit Goswami <HaoZeke>
 #include "xtensor/xarray.hpp"
 
-#include "distance/pdist/euclidean.hpp"
-#include "distance/squareform.hpp"
+#include "xtsci/distance/pdist/euclidean.hpp"
+#include "xtsci/distance/squareform.hpp"
 
 #include <catch2/catch_all.hpp>
 

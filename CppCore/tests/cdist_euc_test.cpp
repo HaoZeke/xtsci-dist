@@ -3,7 +3,7 @@
 #include "xtensor-io/xnpz.hpp"
 #include "xtensor/xarray.hpp"
 
-#include "distance/cdist/euclidean.hpp"
+#include "xtsci/distance/cdist/euclidean.hpp"
 
 #include <catch2/catch_all.hpp>
 

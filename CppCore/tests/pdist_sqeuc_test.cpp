@@ -3,7 +3,7 @@
 #include "xtensor-io/xnpz.hpp"
 #include "xtensor/xarray.hpp"
 
-#include "distance/pdist/sqeuclidean.hpp"
+#include "xtsci/distance/pdist/sqeuclidean.hpp"
 
 #include <catch2/catch_all.hpp>
 
