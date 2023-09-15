@@ -198,6 +198,109 @@ package:
   license_family: BSD
   size: 20504
   timestamp: 1666891247102
+- name: catch2
+  version: 3.4.0
+  manager: conda
+  platform: linux-64
+  dependencies:
+    libgcc-ng: '>=12'
+  url: https://conda.anaconda.org/conda-forge/linux-64/catch2-3.4.0-h00ab1b0_0.conda
+  hash:
+    md5: a1754ce72bb059a521a6c9644b4e6bdf
+    sha256: 35760560f568e28799419eaeb681b31c4f8fe919c0842c568834351677a4362f
+  optional: false
+  category: main
+  build: h00ab1b0_0
+  arch: x86_64
+  subdir: linux-64
+  build_number: 0
+  license: BSL-1.0
+  size: 616467
+  timestamp: 1689256051291
+- name: libgcc-ng
+  version: 13.2.0
+  manager: conda
+  platform: linux-64
+  dependencies:
+    _libgcc_mutex: ==0.1 conda_forge
+    _openmp_mutex: '>=4.5'
+  url: https://conda.anaconda.org/conda-forge/linux-64/libgcc-ng-13.2.0-h807b86a_0.conda
+  hash:
+    md5: 3934dca6107fad668d036a4cafca1015
+    sha256: 4d32e497a5e130c2915b12301f47881a362a8ae16243885e10355b2bcc6abd6b
+  optional: false
+  category: main
+  build: h807b86a_0
+  arch: x86_64
+  subdir: linux-64
+  build_number: 0
+  constrains:
+  - libgomp 13.2.0 h807b86a_0
+  license: GPL-3.0-only WITH GCC-exception-3.1
+  license_family: GPL
+  size: 770774
+  timestamp: 1694376312964
+- name: _libgcc_mutex
+  version: '0.1'
+  manager: conda
+  platform: linux-64
+  dependencies: {}
+  url: https://conda.anaconda.org/conda-forge/linux-64/_libgcc_mutex-0.1-conda_forge.tar.bz2
+  hash:
+    md5: d7c89558ba9fa0495403155b64376d81
+    sha256: fe51de6107f9edc7aa4f786a70f4a883943bc9d39b3bb7307c04c41410990726
+  optional: false
+  category: main
+  build: conda_forge
+  arch: x86_64
+  subdir: linux-64
+  build_number: 0
+  license: None
+  size: 2562
+  timestamp: 1578324546067
+- name: _openmp_mutex
+  version: '4.5'
+  manager: conda
+  platform: linux-64
+  dependencies:
+    libgomp: '>=7.5.0'
+    _libgcc_mutex: ==0.1 conda_forge
+  url: https://conda.anaconda.org/conda-forge/linux-64/_openmp_mutex-4.5-2_gnu.tar.bz2
+  hash:
+    md5: 73aaf86a425cc6e73fcf236a5a46396d
+    sha256: fbe2c5e56a653bebb982eda4876a9178aedfc2b545f25d0ce9c4c0b508253d22
+  optional: false
+  category: main
+  build: 2_gnu
+  arch: x86_64
+  subdir: linux-64
+  build_number: 16
+  constrains:
+  - openmp_impl 9999
+  license: BSD-3-Clause
+  license_family: BSD
+  size: 23621
+  timestamp: 1650670423406
+- name: libgomp
+  version: 13.2.0
+  manager: conda
+  platform: linux-64
+  dependencies:
+    _libgcc_mutex: ==0.1 conda_forge
+  url: https://conda.anaconda.org/conda-forge/linux-64/libgomp-13.2.0-h807b86a_0.conda
+  hash:
+    md5: 33c2353e425610c69ad58a8e29694724
+    sha256: 92feb26e751356fda6a1b24f37b9532aacb70b7dfc4c5c5773372e564147f310
+  optional: false
+  category: main
+  build: h807b86a_0
+  arch: x86_64
+  subdir: linux-64
+  build_number: 0
+  license: GPL-3.0-only WITH GCC-exception-3.1
+  license_family: GPL
+  size: 421525
+  timestamp: 1694376243359
 - name: python
   version: 3.10.12
   manager: conda
@@ -292,29 +395,6 @@ package:
   license: ISC
   size: 149515
   timestamp: 1690026108541
-- name: libgcc-ng
-  version: 13.2.0
-  manager: conda
-  platform: linux-64
-  dependencies:
-    _libgcc_mutex: ==0.1 conda_forge
-    _openmp_mutex: '>=4.5'
-  url: https://conda.anaconda.org/conda-forge/linux-64/libgcc-ng-13.2.0-h807b86a_0.conda
-  hash:
-    md5: 3934dca6107fad668d036a4cafca1015
-    sha256: 4d32e497a5e130c2915b12301f47881a362a8ae16243885e10355b2bcc6abd6b
-  optional: false
-  category: main
-  build: h807b86a_0
-  arch: x86_64
-  subdir: linux-64
-  build_number: 0
-  constrains:
-  - libgomp 13.2.0 h807b86a_0
-  license: GPL-3.0-only WITH GCC-exception-3.1
-  license_family: GPL
-  size: 770774
-  timestamp: 1694376312964
 - name: readline
   version: '8.2'
   manager: conda
@@ -538,67 +618,6 @@ package:
   license: LGPL-2.1 and GPL-2.0
   size: 418368
   timestamp: 1660346797927
-- name: _libgcc_mutex
-  version: '0.1'
-  manager: conda
-  platform: linux-64
-  dependencies: {}
-  url: https://conda.anaconda.org/conda-forge/linux-64/_libgcc_mutex-0.1-conda_forge.tar.bz2
-  hash:
-    md5: d7c89558ba9fa0495403155b64376d81
-    sha256: fe51de6107f9edc7aa4f786a70f4a883943bc9d39b3bb7307c04c41410990726
-  optional: false
-  category: main
-  build: conda_forge
-  arch: x86_64
-  subdir: linux-64
-  build_number: 0
-  license: None
-  size: 2562
-  timestamp: 1578324546067
-- name: _openmp_mutex
-  version: '4.5'
-  manager: conda
-  platform: linux-64
-  dependencies:
-    libgomp: '>=7.5.0'
-    _libgcc_mutex: ==0.1 conda_forge
-  url: https://conda.anaconda.org/conda-forge/linux-64/_openmp_mutex-4.5-2_gnu.tar.bz2
-  hash:
-    md5: 73aaf86a425cc6e73fcf236a5a46396d
-    sha256: fbe2c5e56a653bebb982eda4876a9178aedfc2b545f25d0ce9c4c0b508253d22
-  optional: false
-  category: main
-  build: 2_gnu
-  arch: x86_64
-  subdir: linux-64
-  build_number: 16
-  constrains:
-  - openmp_impl 9999
-  license: BSD-3-Clause
-  license_family: BSD
-  size: 23621
-  timestamp: 1650670423406
-- name: libgomp
-  version: 13.2.0
-  manager: conda
-  platform: linux-64
-  dependencies:
-    _libgcc_mutex: ==0.1 conda_forge
-  url: https://conda.anaconda.org/conda-forge/linux-64/libgomp-13.2.0-h807b86a_0.conda
-  hash:
-    md5: 33c2353e425610c69ad58a8e29694724
-    sha256: 92feb26e751356fda6a1b24f37b9532aacb70b7dfc4c5c5773372e564147f310
-  optional: false
-  category: main
-  build: h807b86a_0
-  arch: x86_64
-  subdir: linux-64
-  build_number: 0
-  license: GPL-3.0-only WITH GCC-exception-3.1
-  license_family: GPL
-  size: 421525
-  timestamp: 1694376243359
 - name: python_abi
   version: '3.10'
   manager: conda
@@ -1468,11 +1487,11 @@ package:
   manager: conda
   platform: linux-64
   dependencies:
-    libvorbis: '>=1.3.7,<1.4.0a0'
+    libgcc-ng: '>=9.3.0'
     libstdcxx-ng: '>=9.3.0'
     libflac: '>=1.3.3,<1.4.0a0'
     libopus: '>=1.3.1,<2.0a0'
-    libgcc-ng: '>=9.3.0'
+    libvorbis: '>=1.3.7,<1.4.0a0'
     libogg: '>=1.3.4,<1.4.0a0'
   url: https://conda.anaconda.org/conda-forge/linux-64/libsndfile-1.0.31-h9c3ff4c_1.tar.bz2
   hash:
@@ -1575,8 +1594,8 @@ package:
   manager: conda
   platform: linux-64
   dependencies:
-    libstdcxx-ng: '>=9.3.0'
     libgcc-ng: '>=9.3.0'
+    libstdcxx-ng: '>=9.3.0'
     libogg: '>=1.3.4,<1.4.0a0'
   url: https://conda.anaconda.org/conda-forge/linux-64/libvorbis-1.3.7-h9c3ff4c_0.tar.bz2
   hash:
@@ -2380,10 +2399,10 @@ package:
   manager: conda
   platform: linux-64
   dependencies:
-    libzlib: '>=1.2.13,<1.3.0a0'
+    libgcc-ng: '>=12'
     libuuid: '>=2.32.1,<3.0a0'
     freetype: '>=2.12.1,<3.0a0'
-    libgcc-ng: '>=12'
+    libzlib: '>=1.2.13,<1.3.0a0'
     expat: '>=2.5.0,<3.0a0'
   url: https://conda.anaconda.org/conda-forge/linux-64/fontconfig-2.14.2-h14ed4e7_0.conda
   hash:
