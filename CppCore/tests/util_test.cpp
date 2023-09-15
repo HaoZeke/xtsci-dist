@@ -2,7 +2,7 @@
 // Copyright 2023--present Rohit Goswami <HaoZeke>
 #include "xtensor/xarray.hpp"
 
-#include "utils/util.hpp"
+#include "xtsci/util.hpp"
 
 #include <catch2/catch_all.hpp>
 
