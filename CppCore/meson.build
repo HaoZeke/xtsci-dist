@@ -18,8 +18,8 @@ test_deps += dependency(
 )
 test_args = _args
 test_array = [#
-  ['pdist_euc_test', 'pdist_euc_test.cpp'],
-  ['pdist_seuc_test', 'pdist_seuc_test.cpp'],
+  ['pdist_euc_test', 'pdist_euc_test.cpp', '/CppCore/tests'],
+  ['pdist_seuc_test', 'pdist_seuc_test.cpp', '/CppCore/tests'],
 ]
 foreach test : test_array
   test(test.get(0),
@@ -30,5 +30,6 @@ foreach test : test_array
           cpp_args: test_args,
           link_with: _linkto,
                  ),
+        workdir : meson.source_root() + test.get(2)
       )
 endforeach
