@@ -34,7 +34,8 @@ TEST_CASE("Testing distance::pdist::sqeuclidean",
   }
 
   SECTION("Test 3: A 3x4 matrix") {
-    xt::xarray<double> mat = xt::load_npz<double>("data/inp_3_4.npz", "inp");
+    xt::xarray<double> mat =
+        xt::load_npz<double>("data/pdist_inp_3_4.npz", "inp");
     // TODO(rgoswami): Upstream bug, Layout not supported in immediate
     // reduction. auto tdat= xt::load_npz("data/inp_3_4.npz"); auto mat =
     // tdat["inp"].cast<double>();
