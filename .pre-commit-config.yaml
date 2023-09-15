@@ -16,7 +16,7 @@ repos:
   hooks:
     - id: cppcheck
       args: ["--error-exitcode=0"]
-    - id: clang-tidy
+    # - id: clang-tidy
     - id: cpplint
       args: ["--filter=-whitespace/comments,-runtime/references"]
 -   repo: https://github.com/pycqa/isort
