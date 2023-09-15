@@ -1,4 +1,6 @@
 #pragma once
+// MIT License
+// Copyright 2023--present Rohit Goswami <HaoZeke>
 #include "fmt/core.h"
 #include "fmt/format.h"
 #include "xtensor/xarray.hpp"

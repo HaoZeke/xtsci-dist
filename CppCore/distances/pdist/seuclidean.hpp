@@ -1,3 +1,6 @@
+#pragma once
+// MIT License
+// Copyright 2023--present Rohit Goswami <HaoZeke>
 #include "xtensor/xexpression.hpp"
 #include "xtensor/xmath.hpp"
 #include "xtensor/xtensor.hpp"
@@ -53,7 +56,7 @@ template <class E> auto seuclidean_ND(const xt::xexpression<E> &expr) {
 }
 
 template <class E> auto seuclidean(const xt::xexpression<E> &expr) {
-  // TODO: Support passing in variance like scipy does
+  // TODO(rgoswami): Support passing in variance like scipy does
   const auto &mat = expr.derived_cast();
   if (mat.dimension() != 2) {
     throw std::runtime_error("Input tensor must be 2D");

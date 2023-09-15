@@ -1,3 +1,5 @@
+// MIT License
+// Copyright 2023--present Rohit Goswami <HaoZeke>
 #include "xtensor-io/xnpz.hpp"
 #include "xtensor/xarray.hpp"
 
@@ -7,7 +9,6 @@
 
 TEST_CASE("Testing distances::pdist::euclidean",
           "[distances::pdist::euclidean]") {
-
   SECTION("Test 1: Simple 3x1 matrix") {
     xt::xarray<double> mat = {0.57955012, 0.9640571, 0.96120518};
     mat.reshape({3, 1});
@@ -34,9 +35,9 @@ TEST_CASE("Testing distances::pdist::euclidean",
 
   SECTION("Test 3: A 3x4 matrix") {
     xt::xarray<double> mat = xt::load_npz<double>("data/inp_3_4.npz", "inp");
-    // TODO: Upstream bug, Layout not supported in immediate reduction.
-    // auto tdat= xt::load_npz("data/inp_3_4.npz");
-    // auto mat = tdat["inp"].cast<double>();
+    // TODO(rgoswami): Upstream bug, Layout not supported in immediate
+    // reduction. auto tdat= xt::load_npz("data/inp_3_4.npz"); auto mat =
+    // tdat["inp"].cast<double>();
     xt::xarray<double> expected =
         xt::load_npz<double>("data/eucDist_3_4.npz", "eucDist");
     auto result = xts::distances::pdist::euclidean(mat);

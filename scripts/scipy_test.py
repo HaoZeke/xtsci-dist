@@ -1,5 +1,5 @@
-from scipy.spatial import distance
 import numpy as np
+from scipy.spatial import distance
 
 np.random.seed(1995)
 # A = np.array([0.57955012, 0.9640571, 0.96120518]).reshape(-1, 1)

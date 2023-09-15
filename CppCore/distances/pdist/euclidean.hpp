@@ -1,3 +1,6 @@
+#pragma once
+// MIT License
+// Copyright 2023--present Rohit Goswami <HaoZeke>
 #include "xtensor/xexpression.hpp"
 #include "xtensor/xmath.hpp"
 #include "xtensor/xtensor.hpp"
