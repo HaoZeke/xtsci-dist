@@ -8,7 +8,7 @@
 
 #include <iostream>
 
-#include "include/xtensor_fmt.hpp"
+#include "xtensor-fmt/xarray.hpp"
 #include "xtensor-io/xnpz.hpp"
 #include "xtensor/xarray.hpp"
 #include "xtsci/distance/cdist/euclidean.hpp"
